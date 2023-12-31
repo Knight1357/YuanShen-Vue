@@ -2,10 +2,12 @@
   <div class="background">
     <img :src="require('../../assets/element/' + dqheroxxs[dqzx].em + '.png')" alt="" class="element">
     <div class="namexian"></div>
-    <img :src="require('../../assets/hero/dq' + dqheroxxs[dqzx].num + 'D' + dqheroxxs[dqzx].sx + '.png')" alt="" class="bighero">
+    <img :src="require('../../assets/hero/dq' + dqheroxxs[dqzx].num + 'D' + dqheroxxs[dqzx].sx + '.png')" alt=""
+      class="bighero">
     <img src="../../assets/jiaosepage/sanhua.png" alt="" class="sanhua">
     <div class="yxname">{{ dqheroxxs[dqzx].name }}</div>
-    <img :src="require('../../assets/hero/dq' + dqheroxxs[dqzx].num + 'Z' + dqheroxxs[dqzx].sx + '.png')" alt="" class="Lines">
+    <img :src="require('../../assets/hero/dq' + dqheroxxs[dqzx].num + 'Z' + dqheroxxs[dqzx].sx + '.png')" alt=""
+      class="Lines">
     <div class="yxyy">
       <img src="../../assets/jtleft.png" alt="" class="jtleft" @click="dianji(dqzx - 1)">
       <ul class="jskp">

@@ -74,6 +74,7 @@ export default {
       // console.log("citydd.value*2+backtp.value-2: ",citydd.value*2+backtp.value-2)
       return citydd.value * 2 + backtp.value - 2
     })
+    // 当k变化时，使用watch监听并更新image的值
     watch(k, (newValue) => {
       // console.log("变化image值",newValue,)
       image.value = ref(imagesll[newValue])

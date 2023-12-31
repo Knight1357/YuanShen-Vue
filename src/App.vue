@@ -1,7 +1,6 @@
 <template>
   <ysheader></ysheader>
   <router-view>
-
   </router-view>
 </template>
 
