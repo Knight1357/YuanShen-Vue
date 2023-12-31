@@ -175,4 +175,5 @@ export default {
 .homepc:hover {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
-}</style>
+}
+</style>

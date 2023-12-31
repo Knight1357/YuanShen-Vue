@@ -33,7 +33,7 @@
 </template>
 
 <script scope>
-import TimerTpChange from '../hooks/TimerTpChange.js'
+import TimerTpChange from '/src/TimerTpChange.js'
 import { ref, computed, watch } from 'vue'
 export default {
   name: 'jiaose',
