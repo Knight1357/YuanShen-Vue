@@ -1,13 +1,13 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../components/Home"
-import xingwen from "../components/xingwen"
-import jiaose from "../components/jiaose"
-import shijie from "../components/shijie"
-import manhua from "../components/manhua"
-import shequ from "../components/shequ"
-import Mengde from "../components/jiaose/Mengde"
-import Liyue from "../components/jiaose/Liyue"
-import Daoqi from "../components/jiaose/Daoqi"
+import Home from "./components/Home"
+import xingwen from "./components/xingwen"
+import jiaose from "./components/jiaose"
+import shijie from "./components/shijie"
+import manhua from "./components/manhua"
+import shequ from "./components/shequ"
+import Mengde from "./components/jiaose/Mengde"
+import Liyue from "./components/jiaose/Liyue"
+import Daoqi from "./components/jiaose/Daoqi"
 
 const router = createRouter({
     history: createWebHashHistory(),
