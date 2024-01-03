@@ -1,14 +1,16 @@
 <template>
-  <br>
-  <br>
-  <br>
-  <h1>新闻内容...</h1>
-  <h1>暂未开发，敬请期待</h1>
+
+  <ChildComponent></ChildComponent>
 </template>
 
 <script>
-export default {
+import ChildComponent from '../components/ChildComponent.vue'
 
+export default {
+  name: 'App',
+  components: {
+    ChildComponent
+  }
 }
 </script>
 
