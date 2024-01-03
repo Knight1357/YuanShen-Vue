@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="background">
     <img :src="require('../../assets/element/' + dqheroxxs[dqzx].em + '.png')" alt="" class="element">
@@ -13,8 +14,6 @@
       <ul class="jskp">
         <li v-for="(p) in dqheroxxs.slice(arrow, arrow + 6)" :key="p.num" @click="dianji(p.num)"
           :class="{ xzjl1: (p.num === dqzx) }">
-          <!-- <img :src="require('../../assets/hero/dq0Xq.png')" alt=""> -->
-          <!-- <img :src="p.xtp" alt=""> -->
           <img :src="require('../../assets/hero/dq' + p.num + 'X' + p.sx + '.png')" alt="">
           <div class="wz" :class="{ xzjl2: (p.num === dqzx) }">{{ p.name }}</div>
         </li>
@@ -27,6 +26,7 @@
 <script>
 
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Mengde',
   data() {
     return {
@@ -227,4 +227,5 @@ export default {
 .xzjl2 {
   color: #000 !important;
   background-color: #fff !important;
-}</style>
+}
+</style>

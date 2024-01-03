@@ -1,48 +1,30 @@
 <template>
-  <!-- <div class="back" :style="{'background-image':'url('+image.value+')'}"> -->
-  <div class="back" :style="image.value">
-    <img src="../assets/jiaosepage/ysyy.png" alt="" class="ysyy">
-
-    <div class="js_nav">
-      <div class="xian"></div>
-      <div class="city_ul">
-        <div class="city_li">
-          <img src="../assets/jiaosepage/done.png" alt="" class="done">
-          <img src="../assets/jiaosepage/xuanzhong.png" class="xuanzhong" v-if="citydd === 1" alt="">
-          <router-link class="city_Mengde" to="/jiaose/Mengde" @click="di(1)" active-class="xuancity">蒙德城</router-link>
-        </div>
-        <div class="city_li">
-          <img src="../assets/jiaosepage/done.png" alt="" class="done">
-          <img src="../assets/jiaosepage/xuanzhong.png" class="xuanzhong" v-if="citydd === 2" alt="">
-          <router-link class="city_Liyue" to="/jiaose/Liyue" @click="di(2)" active-class="xuancity">璃月港</router-link>
-        </div>
-        <div class="city_li">
-          <img src="../assets/jiaosepage/done.png" alt="" class="done">
-          <img src="../assets/jiaosepage/xuanzhong.png" class="xuanzhong" v-if="citydd === 3" alt="">
-          <router-link class="city_Daoqi" to="/jiaose/Daoqi" @click="di(3)" active-class="xuancity">稻妻城</router-link>
-        </div>
-        <div class="city_li">
-          <img src="../assets/jiaosepage/done.png" alt="" class="done">
-          <a href="#" onclick="return false" style="cursor:default">敬请期待</a>
-        </div>
-      </div>
+  <siderbar :stringArray="stringArray">
+    <!-- 父组件的内容通过 slot 插槽传递给子组件 -->
+    <div class="city_li">
+      <img src="../assets/jiaosepage/done.png" alt="" class="done">
+      <a href="#" onclick="return false" style="cursor:default">敬请期待</a>
     </div>
-    <router-view>
-    </router-view>
-  </div>
+  </siderbar>
 </template>
 
 <script scope>
 import TimerTpChange from '/src/TimerTpChange.js'
 import { ref, computed, watch } from 'vue'
+import siderbar from '/src/components/siderbar.vue'
+
 export default {
+  components: {
+    siderbar
+  },
+  // eslint-disable-next-line vue/multi-word-component-names
   name: 'jiaose',
   // image: require('../assets/jiaosepage/md001.jpg')
   data() {
     return {
-
+      stringArray: ['蒙德城', '璃月港', '稻妻城']
     }
-  },
+	},
   setup() {
     //点击进入哪个大陆
     let citydd = ref(1)
@@ -66,6 +48,11 @@ export default {
     ]
     //定时器
     let backtp = TimerTpChange()
+    /*
+      2.计算属性对数据进行处理
+      通过computed函数创建了一个计算属性k
+      计算后得到技算属性k的值
+    */
     let k = computed(() => {
       // console.log("k值有变化！！")
       // console.log("k.value: ",k.value)
@@ -74,7 +61,10 @@ export default {
       // console.log("citydd.value*2+backtp.value-2: ",citydd.value*2+backtp.value-2)
       return citydd.value * 2 + backtp.value - 2
     })
-    // 当k变化时，使用watch监听并更新image的值
+    /*
+      2.侦听器对数据进行处理
+      当k变化时，使用watch监听并更新image的值
+    */
     watch(k, (newValue) => {
       // console.log("变化image值",newValue,)
       image.value = ref(imagesll[newValue])

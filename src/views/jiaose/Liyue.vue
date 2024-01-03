@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="background">
     <img :src="require('../../assets/element/' + lyheroxxs[dqzx].em + '.png')" alt="" class="element">

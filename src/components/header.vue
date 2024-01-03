@@ -3,6 +3,10 @@
         <img class="yslogo" src="../assets/yslogo.png" alt="">
         <div class="ys-top-nav">
             <div class="ys-nav-ul">
+                <!-- 
+                    2.点击事件处理机制
+                    点击后进行页面切换 
+                -->
                 <div class="ys_nav_l1"><router-link to='/' @click="mm1">首 页</router-link></div>
                 <div class="ys_nav_l2"><router-link to='/xingwen' @click="mm2">新 闻</router-link></div>
                 <div class="ys_nav_l3"><router-link to='/jiaose/Mengde' @click="mm3">角 色</router-link></div>
@@ -19,6 +23,11 @@
 
 <script>
 export default {
+    /*
+        1. 使用 vue 响应式系统进行数据操作
+        headnav 在 data 中被定义，Vue会将其转化为一个响应式对象
+        当headnav值改变时相关页面就会更新
+    */
     // eslint-disable-next-line vue/multi-word-component-names
     name: "ysheader",
     data() {
